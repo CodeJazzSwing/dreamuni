@@ -1,0 +1,66 @@
+[
+    {
+        "first_name": "Eric",
+        "last_name": "Cartman",
+        "email": "eric@du.edu",
+        "major": "Hunting"
+    },
+
+    {
+        "first_name": "Stan",
+        "last_name": "Marsh",
+        "email": "stan@du.edu",
+        "major": "Agriculture"
+    },
+    
+    {
+        "first_name": "Kyle",
+        "last_name": "Broflovski",
+        "email": "kyle@du.edu",
+        "major": "Philosophy"
+    }, 
+
+    {
+        "first_name": "Kenny",
+        "last_name": "McCormick",
+        "email": "betty@du.edu",
+        "major": "Physics"
+    },
+
+    {
+        "first_name": "Forhorn",
+        "last_name": "Leghorn",
+        "email": "fog@du.edu",
+        "major": "Athletic Training"
+    },
+
+    {
+        "first_name": "Ella",
+        "last_name": "Fitzgerald",
+        "email": "ella@du.edu",
+        "major": "Music"
+    },
+
+    {
+        "first_name": "Marie",
+        "last_name": "Curie",
+        "email": "mary@du.edu",
+        "major": "Physics"
+    },
+
+    {
+        "first_name": "Porky",
+        "last_name": "Pig",
+        "email": "porky@du.edu",
+        "major": "Engineering"
+    },
+
+    {
+        "first_name": "Ingrid",
+        "last_name": "Bergman",
+        "email": "ingrid@du.edu",
+        "major": "Film"
+    }
+
+
+]

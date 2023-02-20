@@ -1,0 +1,91 @@
+[
+    {
+        "first_name": "Roger",
+        "last_name": "Rabbit",
+        "email": "rabbit@du.edu",
+        "us_state": "CA",
+        "birthdate": "1998-11-12",
+        "major": "Film"
+    },
+
+    {
+        "first_name": "Bugs",
+        "last_name": "Bunny",
+        "email": "bugs@du.edu",
+        "us_state": "CA",
+        "birthdate": "1997-04-01",
+        "major": "Agriculture"
+    },
+    
+    {
+        "first_name": "Donald",
+        "last_name": "Duck",
+        "email": "donald@du.edu",
+        "us_state": "WA",
+        "birthdate": "1995-05-12",
+        "major": "Philosophy"
+    }, 
+
+    {
+        "first_name": "Betty",
+        "last_name": "Boop",
+        "email": "betty@du.edu",
+        "us_state": "OR",
+        "birthdate": "1981-02-14",
+        "major": "Science"
+    },
+
+    {
+        "first_name": "Road",
+        "last_name": "Runner",
+        "email": "road@du.edu",
+        "us_state": "AZ",
+        "birthdate": "1988-04-01",
+        "major": "Athletic Training"
+    },
+
+    {
+        "first_name": "Wild",
+        "last_name": "Coyote",
+        "email": "wild@du.edu",
+        "us_state": "NM",
+        "birthdate": "1987-08-26",
+        "major": "Hunting"
+    },
+
+    {
+        "first_name": "Wendy",
+        "last_name": "Testaburger",
+        "email": "wendy@du.edu",
+        "us_state": "CO",
+        "birthdate":"1982-03-21",
+        "major": "Engineering"
+    },
+
+    {
+        "first_name": "Lisa",
+        "last_name": "Simpson",
+        "email": "lisa@du.edu",
+        "us_state": "OR",
+        "birthdate": "1981-02-29",
+        "major": "Music"
+    },
+
+    {
+        "first_name": "Jean",
+        "last_name": "Grey",
+        "email": "jean@du.edu",
+        "us_state": "NY",
+        "birthdate": "1970-06-11",
+        "major": "Physics"
+    },
+
+    {
+        "first_name": "Mighty",
+        "last_name": "Mouse",
+        "email": "mighty@du.edu",
+        "us_state": "NY",
+        "birthdate": "1973-04-18",
+        "major": "Physics"
+    }
+]
