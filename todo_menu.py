@@ -35,25 +35,31 @@ def add_student():
 def get_student():
     College_Students = []
     print("Get student")
-    res = requests.get(url("/all"))
-    if not res.status_code == 200:
-        return
-    data = res.json()
-    College = College_Students
-    for College in data:
-        print("_______")
-        print(f"ID: {College.id}")
-        print(f"First Name: {College.first_name}")
-        print(f"Last Name: {College.last_name}")
-        print(f"Email: {College.email}")
-        print(f"US State: {College.us_state}")
-        print(f"Birthdate: {College.birthdate}")
-        print(f"Major: {College.major}")
-        print(res.json())
-        College_Students.append(College)
-    return College_Students
+    try:
+        res = requests.get(url("/all"))
+        res.raise_for_status()
+        data = res.json()
+        for College in data:
+            print("_______")
+            print(f"ID: {College.id}")
+            print(f"First Name: {College.first_name}")
+            print(f"Last Name: {College.last_name}")
+            print(f"Email: {College.email}")
+            print(f"US State: {College.us_state}")
+            print(f"Birthdate: {College.birthdate}")
+            print(f"Major: {College.major}")
+            print(res.json())
+            College_Students.append(College)
+        return College_Students
+    except requests.exceptions.RequestException as err:
+        print ("OOps: Something Else",err)
+    except requests.exceptions.HTTPError as errh:
+        print ("Http Error:",errh)
+    except requests.exceptions.ConnectionError as errc:
+        print ("Error Connecting:",errc)
+    except requests.exceptions.Timeout as errt:
+        print ("Timeout Error:",errt)   
 
-     
 
 def delete_student():
     print("Delete student")
