@@ -33,14 +33,31 @@ def add_student():
     
 
 def get_student():
+    College_Students = []
     print("Get student")
     res = requests.get(url("/all"))
-    print(res.json())
-    pass 
+    if not res.status_code == 200:
+        return
+    data = res.json()
+    College = College_Students
+    for College in data:
+        print("_______")
+        print(f"ID: {College.id}")
+        print(f"First Name: {College.first_name}")
+        print(f"Last Name: {College.last_name}")
+        print(f"Email: {College.email}")
+        print(f"US State: {College.us_state}")
+        print(f"Birthdate: {College.birthdate}")
+        print(f"Major: {College.major}")
+        print(res.json())
+        College_Students.append(College)
+    return College_Students
+
+     
 
 def delete_student():
     print("Delete student")
-    res = requests.delete(url("/delete_student/{id}")) #Something is messed up here....
+    res = requests.delete(url("/delete_student/{id}")) #Something is messed up here....printing a different error message. 
     print(res.json())
     pass
 
