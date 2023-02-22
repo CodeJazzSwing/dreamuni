@@ -2,7 +2,8 @@ from fastapi import FastAPI
 import sqlite3
 from pydantic import BaseModel
 
-class College(BaseModel):
+
+class Student(BaseModel):
     id: int
     first_name: str
     last_name: str
@@ -19,6 +20,8 @@ class Advisor(BaseModel):
     major: str
 
 app = FastAPI()
+
+
 
 #Get all students
 @app.get("/all")
@@ -73,11 +76,11 @@ def read_root(state_id):
     connection.close()
     return data
 
-
+ 
 
 #Change majors.  
 @app.put("/update_student")
-def update_student(student: College):
+def update_student(student: Student):
     connection = sqlite3.connect("unitable.db")
     cur = connection.cursor()
     res = cur.execute("UPDATE student SET major = ? WHERE id = ?", [student.major, student.id]) 
@@ -102,7 +105,7 @@ def update_advisor(advisors: Advisor):
 
 
 @app.post("/create_student")
-def create_student(student: College):
+def create_student(student: Student):
     connection = sqlite3.connect("unitable.db")
     cur = connection.cursor()
     res = cur.execute("INSERT INTO student (first_name, last_name, email, us_state, birthdate, major) VALUES (?, ?, ?, ?, ?, ?)", 
@@ -127,6 +130,8 @@ def create_advisor(advisors: Advisor):
  
 @app.delete("/delete_student/{id}")
 def delete_student(id: int):
+    print("Hi, we're in delete student function")
+    print(id)
     connection = sqlite3.connect("unitable.db")
     cur = connection.cursor()
     res = cur.execute("DELETE FROM student WHERE id = ?", [id]) 

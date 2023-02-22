@@ -14,7 +14,7 @@ def call_db(query: str, values:list):
     return data
 
 
-with open ("seed_student.json", "r") as seed:   
+with open("seed_student.json") as seed:   #r= open for default
     data = json.load(seed)
     for record in data:
         # print("Printing record...") #Do not need this line....Used as a test to see if printing.
@@ -23,7 +23,7 @@ with open ("seed_student.json", "r") as seed:
         [record.get("first_name"), record.get("last_name"), record.get("email"), record.get("us_state"), record.get("birthdate"), record.get("major")])
 
 
-with open ("seed_advisor.json", "r") as seed:   
+with open("seed_advisor.json") as seed:   
     data = json.load(seed)
     for record in data:
         print(record)   
