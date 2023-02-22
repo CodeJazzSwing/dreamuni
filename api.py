@@ -73,7 +73,7 @@ def read_root(state_id):
     connection.close()
     return data
 
-
+ 
 
 #Change majors.  
 @app.put("/update_student")
