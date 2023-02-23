@@ -1,12 +1,11 @@
 import requests
-from typing import List
 from api import Student  
 
 
 def url (route:str): 
     return f"http://127.0.0.1:8000{route}" #The ROUTE adds the end of the URL in each CRUD function.
 
-print("Hello from Student App")
+print("Welcome to the University Student Amend Center")
 
 def print_menu():
     print(
@@ -72,7 +71,7 @@ def update_student():
 def main():
     print_menu()
     choice = input("Choose what you want to do: ")
-    choice = choice.strip() #Takes away the blank space at end and still allows function to be called.
+    choice = choice.strip() #STRIP takes away the blank space at end and still allows function to be called.
     if not str.isdigit(choice):
         print("Print correct option")
         return
@@ -94,6 +93,6 @@ def main():
     pass
 
 #This is a while loop with an installed function called NAME. To call the MAIN function over and over.
-#
+
 while __name__ == "__main__":
     main()

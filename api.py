@@ -22,7 +22,6 @@ class Advisor(BaseModel):
 app = FastAPI()
 
 
-
 #Get all students
 @app.get("/all")
 def read_root():
@@ -51,7 +50,7 @@ def read_root():
     connection.close()
     return data
 
-#Get with california state name
+#Get with California state name
 @app.get("/california")
 def read_root():
     connection = sqlite3.connect("unitable.db")
@@ -116,6 +115,7 @@ def create_student(student: Student):
     connection.close()
     return(student)
  
+
 @app.post("/create_advisor")
 def create_advisor(advisors: Advisor):
     connection = sqlite3.connect("unitable.db")
@@ -130,8 +130,6 @@ def create_advisor(advisors: Advisor):
  
 @app.delete("/delete_student/{id}")
 def delete_student(id: int):
-    print("Hi, we're in delete student function")
-    print(id)
     connection = sqlite3.connect("unitable.db")
     cur = connection.cursor()
     res = cur.execute("DELETE FROM student WHERE id = ?", [id]) 
